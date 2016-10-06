@@ -1,0 +1,307 @@
+@-webkit-keyframes rock{
+    0%{ transform:rotate(0deg) }
+    10%{ transform:rotate(3deg) }
+    20%{ transform:rotate(-3deg) }
+    30%{ transform:rotate(2deg) }
+    40%{ transform:rotate(-2deg) }
+    50%{ transform:rotate(1deg) }
+    60%{ transform:rotate(-1deg) }
+    70%{ transform:rotate(0deg) }
+    100%{ transform:rotate(0deg) }
+}
+
+*{padding: 0;margin: 0}
+
+body{
+    background: #000;
+    min-width: 1200px;
+    min-height: 600px;
+    -webkit-font-smoothing:antialiased;
+    font-family: 'WenQuanYi Micro Hei',Simsun, sans-serif;
+}
+
+.main{
+    width: 1200px;
+    height: 600px;
+    background: url("../img/bg.jpg");
+    position: absolute;
+    margin-left: -600px;
+    margin-top: -300px;
+    left: 50%;
+    top: 50%;
+    overflow: hidden;
+}
+
+.c_zongzi_box{
+    width: 312px;
+    height: 315px;
+    position: absolute;
+    left: 700px;
+    top: 184px;
+}
+.c_zongzi_box_rock{
+    -webkit-animation:rock 2s infinite;
+}
+
+.c_zongzi{
+    width: 312px;
+    height: 315px;
+    background: url("../img/zz.png");
+    transition:all 1s;
+}
+.c_zongzi_out{
+    opacity: 1;
+    transform:scale(.5);
+}
+
+.c_shengzi_1{
+    width: 218px;
+    height: 180px;
+    position: absolute;
+    background: url("../img/line_1.png");
+    top: 120px;
+    left: 10px;
+    z-index: 999;
+    cursor: pointer;
+}
+.c_shengzi_2{
+    width: 219px;
+    height: 159px;
+    background: url("../img/line_2.png");
+    position: absolute;
+    top: 158px;
+    left:10px;
+}
+.c_shengzi_3{
+    width: 264px;
+    height: 117px;
+    background: url("../img/line_3.png");
+    position: absolute;
+    top: 220px;
+    left: 10px;
+}
+.c_shengzi_4{
+    width: 288px;
+    height: 56px;
+    background: url("../img/line_4.png");
+    position: absolute;
+    top: 290px;
+    left:10px;
+}
+.c_shengzi_0{
+    display: none;
+}
+
+.c_zongzirou{
+    background: url("../img/zzr_1.png") no-repeat;
+    background-size: 288px 206px;
+    position: absolute;
+    width: 288px;
+    height: 240px;
+    top: 50px;
+    left: 34px;
+    z-index: 101;
+    opacity: 0;
+    transform:scale(.8);
+    transform-origin:top center;
+}
+.c_zongzirou_in{
+    opacity: 1;
+    transform:scale(1);
+}
+.c_zongzirou_view_1{
+    transition:all 0s;
+    background: url("../img/zzr_1.png") no-repeat;
+}
+.c_zongzirou_view_2{
+    transition:all 0s;
+    background: url("../img/zzr_2.png") no-repeat;
+}
+.c_zongzirou_view_3{
+    transition:all 0s;
+    background: url("../img/zzr_3.png") no-repeat;
+}
+.c_zongzirou_view_4{
+    transition:all 0s;
+    background: url("../img/zzr_4.png") no-repeat;
+}
+.c_zongzirou_view_0{
+    transition:all 0s;
+    background: url("../img/zzr_1.png ") no-repeat;
+}
+
+.c_zuoye{
+    background: url("../img/leaf_left.png");
+    width: 114px;
+    height: 266px;
+    position: absolute;
+    top: -39px;
+    left: -13px;
+    z-index: 101;
+    opacity: 0;
+    transition:all 1s;
+    transform-origin:left bottom;
+}
+.c_zuoye_in{
+    opacity: 1;
+    transform:rotate(-3deg);
+}
+.c_zuoye_out{
+    opacity: 0;
+    transform:rotate(-15deg);
+}
+.c_youye{
+    background: url("../img/leaf_right.png");
+    width: 318px;
+    height: 338px;
+    position: absolute;
+    top: -9px;
+    left: 80px;
+    z-index: 111;
+    opacity: 0;
+    transition:all 1s;
+    transform:scale(.8);
+}
+.c_youye_in{
+    opacity: 1;
+    transform:rotate(5deg) scale(.8);
+}
+.c_youye_out{
+    opacity: 0;
+    transform:rotate(15deg) scale(.8);
+}
+.c_diye{
+    background: url("../img/leaf_expand.png");
+    width: 618px;
+    height: 468px;
+    position: absolute;
+    top: -45px;
+    left: -150px;
+    z-index: 99;
+    opacity:0;
+    transition:all 1s;
+}
+.c_diye_in{
+    opacity: 1;
+}
+
+.c_t_1{
+    width: 180px;
+    height: 100px;
+    background: url("../img/t_jixiang.png");
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 200;
+    margin-left: -70px;
+    margin-top: -50px;
+    opacity: 0;
+    transform-origin:center center;
+    transform:scale(.8);
+}
+.c_t_2{
+    width: 180px;
+    height: 100px;
+    background: url("../img/t_ruyi.png");
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 200;
+    margin-left: -70px;
+    margin-top: -50px;
+    opacity: 0;
+    transform-origin:center center;
+    transform:scale(.8);
+}
+.c_t_in{
+    opacity: 1;
+}
+
+/*文字视角  transiton:all 0 为了让文字跟着粽子的旋转动，而自己本身不需要有任何动画效果*/
+.c_t_view_0{
+    transition:all 0s;
+    transform:scale(.8);
+}
+.c_t_mirror_0{
+    transition:all 0s;
+    display: none;
+}
+.c_t_view_2{
+    transition:all 0s;
+    transform: scale(.8) rotateY(30deg) rotate(8deg) translate(-46px,-3px);
+}
+.c_t_mirror_2{
+    transition:all 0s;
+    transform: scale(.7) rotateY(70deg) rotate(-7deg) translate(240px,25px);
+}
+.c_t_view_3{
+    transiton:all 0s;
+    transform:scale(.65) rotateY(52deg) rotate(17deg) translate(-145px,24px);
+}
+.c_t_mirror_3{
+    transition:all 0s;
+    transform:scale(.75) rotateY(48deg) rotate(-14deg) translate(67px,10px);
+}
+.c_t_view_4{
+    transition:all 0s;
+    transform:scale(.5) rotateY(50deg) rotate(24deg) translate(-178px,10px);
+}
+.c_t_mirror_4{
+    transition:all 0s;
+    transform:scale(.8) rotateY(30deg) rotate(-5deg) translate(42px,10px);
+}
+
+/**祝福语*/
+.text{
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    left: 180px;
+    top: 140px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333;
+}
+.text_in{
+    opacity: 1;
+}
+.text .caption{
+    width: 400px;
+    height: 240px;
+    background: url("../img/caption.png") no-repeat;
+    margin-left: 40px;  /*为了实现左右晃动动画*/
+    opacity: 0;
+    transition:all 1s;
+}
+.text .caption_rock{
+    animation:4s rock infinite;
+}
+.text .from{
+    width: 400px;
+    margin-top: 10px;
+    margin-left: 40px;
+    text-align: right;
+    opacity: 0;
+    transition:all 1s 1.5s;
+}
+.text .msg{
+    width: 400px;
+    margin-top: 10px;
+    margin-left: 40px;
+    opacity: 0;
+    transition:all 1s 1s;
+}
+.text .to{
+    width: 400px;
+    margin-top: 10px;
+    margin-left: 40px;
+    opacity: 0;
+    transition:all 1s .5s;
+}
+.text_in .caption,
+.text_in .to,
+.text_in .msg,
+.text_in .from{
+    opacity: 1;
+    margin-left: 0px;
+}
